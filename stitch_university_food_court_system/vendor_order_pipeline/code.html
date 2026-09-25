@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface": "#fdf8f6", "on-secondary-fixed-variant": "#4b4640", "tertiary-container": "#777471", "surface-container-high": "#ece7e5", "outline-variant": "#ddc0ba", "on-secondary-fixed": "#1e1b16", "secondary-fixed-dim": "#cdc5be", "primary": "#9d3d26", "error-container": "#ffdad6", "tertiary-fixed": "#e6e2de", "on-surface": "#1c1b1a", "primary-fixed": "#ffdad2", "secondary-container": "#e6ded6", "surface-dim": "#ddd9d7", "surface-tint": "#a04028", "secondary-fixed": "#e9e1d9", "on-background": "#1c1b1a", "on-primary-fixed": "#3c0700", "background": "#fdf8f6", "error": "#ba1a1a", "on-primary": "#ffffff", "on-secondary": "#ffffff", "surface-variant": "#e6e2df", "surface-container-highest": "#e6e2df", "inverse-primary": "#ffb4a2", "surface-container-low": "#f7f3f0", "surface-bright": "#fdf8f6", "on-error": "#ffffff", "inverse-on-surface": "#f4f0ee", "inverse-surface": "#31302f", "surface-container": "#f1edeb", "tertiary-fixed-dim": "#cac6c2", "primary-container": "#bd553b", "on-primary-fixed-variant": "#802913", "on-surface-variant": "#56423d", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#484644", "primary-fixed-dim": "#ffb4a2", "on-secondary-container": "#67625b", "tertiary": "#5e5c59", "on-tertiary": "#ffffff", "on-primary-container": "#fffbff", "on-tertiary-fixed": "#1d1b19", "on-error-container": "#93000a", "secondary": "#635e57", "outline": "#8a726c", "on-tertiary-container": "#fffbff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-xl": "2.5rem", "gutter-mobile": "1rem", "space-sm": "0.5rem", "margin": "3rem", "gutter": "1.5rem", "space-lg": "1.5rem", "margin-mobile": "1.25rem", "space-xs": "0.25rem" }, "fontFamily": { "headline-md": [ "Newsreader" ], "headline-xl-mobile": [ "Newsreader" ], "label-sm": [ "Space Mono" ], "headline-lg-mobile": [ "Newsreader" ], "body-sm": [ "Manrope" ], "label-lg": [ "Space Mono" ], "headline-sm": [ "Newsreader" ], "label-md": [ "Space Mono" ], "body-lg": [ "Manrope" ], "body-md": [ "Manrope" ], "headline-xl": [ "Newsreader" ], "headline-lg": [ "Newsreader" ] }, "fontSize": { "headline-md": [ "1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "headline-xl-mobile": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "label-sm": [ "0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.1em", "fontWeight": "400" } ], "headline-lg-mobile": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "body-sm": [ "0.8125rem", { "lineHeight": "1.25rem", "fontWeight": "400" } ], "label-lg": [ "0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0.06em", "fontWeight": "400" } ], "headline-sm": [ "1.25rem", { "lineHeight": "1.75rem", "fontWeight": "500" } ], "label-md": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.08em", "fontWeight": "400" } ], "body-lg": [ "1.125rem", { "lineHeight": "1.75rem", "fontWeight": "400" } ], "body-md": [ "0.9375rem", { "lineHeight": "1.5rem", "fontWeight": "400" } ], "headline-xl": [ "3rem", { "lineHeight": "3.5rem", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "headline-lg": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.015em", "fontWeight": "400" } ] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col justify-between py-6 px-4 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="space-y-6"><div class="flex items-center gap-3 px-2"><img alt="dhaba * brand logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALSr0DMzBwAgfaXcib1b34FfF8_3-E4J6C_cOSYciJdyadj5Cqi-fBH5ZQ-59iMwjIb4yhe8erCiJ7vpMP6FJofWkNTlTIuyxGnWpsn2Rtuw6k7THKJQdG0Qf41sRKx2t2K8qq0GvzQf5F6FruMRAywBN2Ev17zzVGRU7D0P7MHoPmENRVW7BKRXKB3VjnfuJgRUNXV_pWE0mQ8K7PHT7kT-1s4rPHRsmh0ZbHAsJ6rFJFpueZLx4j"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-none">dhaba *</span><span class="font-label-sm text-label-sm text-primary uppercase tracking-widest mt-0.5">KITCHEN KDS</span></div></div><nav class="space-y-1" data-active-classes="bg-surface-container-high text-primary font-medium"><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="kitchen" href="#"><span class="material-symbols-outlined text-[20px]">skillet</span>Live Queue</a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="tracker" href="#"><span class="material-symbols-outlined text-[20px]">confirmation_number</span>Token Callout</a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="menu" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span>Stock Control</a></nav></div><div class="p-3 bg-surface rounded-lg space-y-2"><p class="font-label-sm text-label-sm text-secondary uppercase">KITCHEN STATUS</p><div class="flex items-center justify-between"><span class="font-body-sm text-body-sm text-on-surface font-medium">Station 1-A Active</span><span class="w-2 h-2 rounded-full bg-primary"></span></div><p class="font-label-sm text-label-sm text-secondary">Batch: #B-204</p></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/90 backdrop-blur-md z-40 px-gutter flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-3"><span class="font-label-sm text-label-sm px-2.5 py-1 bg-surface-container rounded font-bold text-primary">SERVICE MODE</span><span class="font-body-sm text-body-sm text-on-surface-variant">BU Concourse Line 01</span></div><div class="flex items-center gap-4"><span class="font-label-sm text-label-sm text-secondary">Lead Chef: S. Rao</span><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcMCbdvl7cClX_4aGkS7t6xvnZ-tmpTx3tJslK5jKqzDXfxROWxaveSEZ5nOOQRpH8b1rGENXT9lUwAYEmnD5n31PfxbJyn9ehcAK7OvZCgeVu3rU6YQkYpiW2rmiJtmxvXdW1jvsD-BGKofvu4LHqGdtfS7bBQnqszITDaGyfxkQBiH23w_jTyb9dAWex-PNC-0EV8eY4kbqrZ_vZA9zEGc9I7L-MJB0GVtvvokdq8rOqHboxMqvm"/></div></header><main class="relative pt-16 bg-surface min-h-screen px-gutter py-space-lg"><div class="flex flex-col w-full">
+<!-- Operational Subheader Banner -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 p-space-md bg-surface-container rounded-lg shadow-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">STALL 01 &amp; 02</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-on-surface">Kitchen Order Pipeline</h1>
+</div>
+<!-- Live Telemetry Ledger -->
+<div class="flex items-center gap-3 px-space-md py-space-sm bg-surface-container-lowest rounded-lg shadow-sm font-label-sm text-label-sm text-secondary">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">local_fire_department</span>
+<span class="font-bold text-on-surface">12</span> Active
+      </div>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">timer</span>
+<span>Avg Ticket <span class="font-bold text-on-surface">5.2m</span></span>
+</div>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+<span class="text-primary font-medium">Lunch Rush (12-3 PM)</span>
+</div>
+</div>
+<!-- Station Filters & Audio Toggle -->
+<div class="flex flex-wrap items-center gap-2">
+<div class="flex items-center p-1 bg-surface-container-high rounded-lg gap-1" id="station-tabs">
+<button class="px-3 py-1.5 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm font-bold shadow-sm transition-all" onclick="filterStation('all', this)">All (12)</button>
+<button class="px-3 py-1.5 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all" onclick="filterStation('biryani', this)">Handi (4)</button>
+<button class="px-3 py-1.5 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all" onclick="filterStation('tawa', this)">Tawa (5)</button>
+<button class="px-3 py-1.5 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all" onclick="filterStation('chai', this)">Chai (3)</button>
+</div>
+<button class="flex items-center gap-1.5 px-3 py-2 bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant rounded-lg shadow-sm transition-colors font-label-sm text-label-sm" id="bell-toggle" onclick="toggleAudio(this)" title="Toggle Sound Alarms">
+<span class="material-symbols-outlined text-[18px] text-primary">notifications_active</span>
+<span class="hidden sm:inline">Chime: ON</span>
+</button>
+</div>
+</div>
+<!-- Visual Rhythm: Kitchen Load Line Graph -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 mt-space-md">
+<div class="p-space-sm bg-surface-container-lowest rounded-lg shadow-sm flex items-center justify-between">
+<div>
+<p class="font-label-sm text-label-sm text-secondary uppercase">Stove Utilization</p>
+<p class="font-headline-sm text-headline-sm text-on-surface mt-0.5">88% Load</p>
+</div>
+<div class="w-16 h-8 text-primary">
+<svg class="w-full h-full stroke-current fill-none stroke-2" viewbox="0 0 60 28">
+<polyline points="0,24 10,18 20,22 30,10 40,14 50,4 60,8"></polyline>
+</svg>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded-lg shadow-sm flex items-center justify-between">
+<div>
+<p class="font-label-sm text-label-sm text-secondary uppercase">Average Cook</p>
+<p class="font-headline-sm text-headline-sm text-on-surface mt-0.5">4m 42s</p>
+</div>
+<div class="w-16 h-8 text-secondary">
+<svg class="w-full h-full stroke-current fill-none stroke-2" viewbox="0 0 60 28">
+<polyline points="0,12 12,14 24,8 36,10 48,16 60,11"></polyline>
+</svg>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded-lg shadow-sm flex items-center justify-between">
+<div>
+<p class="font-label-sm text-label-sm text-secondary uppercase">Delayed Tickets</p>
+<p class="font-headline-sm text-headline-sm text-primary mt-0.5">0 Tokens</p>
+</div>
+<span class="material-symbols-outlined text-[28px] text-primary/70">verified</span>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded-lg shadow-sm flex items-center justify-between">
+<div>
+<p class="font-label-sm text-label-sm text-secondary uppercase">Next Slot Wait</p>
+<p class="font-headline-sm text-headline-sm text-on-surface mt-0.5">~6 Mins</p>
+</div>
+<span class="material-symbols-outlined text-[28px] text-secondary">pace</span>
+</div>
+</div>
+<!-- Primary Pipeline Columns -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-space-lg">
+<!-- ==================== COLUMN 1: QUEUED ==================== -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between pb-2 bg-surface-container-low px-4 py-3 rounded-lg shadow-sm">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 bg-surface-container-lowest rounded font-label-sm text-label-sm font-bold text-secondary tracking-widest">[ QUEUED ]</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Tokens</span>
+</div>
+<span class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm text-label-sm font-bold text-on-surface">4</span>
+</div>
+<!-- Ticket Card 2: Queued Token #085 -->
+<div class="station-card tawa flex flex-col justify-between bg-surface-container-low rounded-lg p-space-md shadow-md hover:shadow-xl transition-shadow relative overflow-hidden">
+<div class="absolute -right-8 -bottom-8 w-24 h-24 bg-primary/5 rounded-full pointer-events-none"></div>
+<div>
+<!-- Top Monospace Bar -->
+<div class="flex items-start justify-between gap-2 pb-3 bg-surface-container-high/60 -mx-4 -mt-4 px-4 py-3 mb-3">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-primary">#085</span>
+<span class="font-label-sm text-label-sm text-secondary">1:18 PM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium mt-0.5">Student: Omer K. <span class="text-secondary font-label-sm">• EE-24</span></p>
+</div>
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-lowest text-secondary uppercase font-semibold">Tawa Line</span>
+</div>
+<!-- Target Waiting Timer -->
+<div class="flex items-center justify-between mb-3 text-secondary font-label-sm text-label-sm px-2 py-1 bg-surface-container-lowest rounded">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">hourglass_top</span> In queue: 01:45</span>
+<span class="text-on-surface-variant">Target prep: 05:00</span>
+</div>
+<!-- Items Checklist -->
+<div class="space-y-2.5 my-3">
+<div class="flex items-start gap-2.5 p-2 rounded bg-surface-container-lowest">
+<input class="mt-1 accent-primary w-4 h-4 rounded cursor-pointer" id="item-85-1" type="checkbox"/>
+<label class="font-body-md text-body-md text-on-surface leading-tight cursor-pointer" for="item-85-1">
+<span class="font-bold text-primary font-label-md">2x</span> Daal Anda Bun Kabab
+                <span class="block font-label-sm text-label-sm text-secondary mt-0.5">Double crisp toasted, green raita dip</span>
+</label>
+</div>
+<div class="flex items-start gap-2.5 p-2 rounded bg-surface-container-lowest">
+<input class="mt-1 accent-primary w-4 h-4 rounded cursor-pointer" id="item-85-2" type="checkbox"/>
+<label class="font-body-md text-body-md text-on-surface leading-tight cursor-pointer" for="item-85-2">
+<span class="font-bold text-primary font-label-md">2x</span> Mint Margarita Soda
+                <span class="block font-label-sm text-label-sm text-secondary mt-0.5">Crushed ice, rock salt rim</span>
+</label>
+</div>
+</div>
+</div>
+<div class="pt-3 mt-2 bg-surface-container/60 -mx-4 -mb-4 px-4 py-3 flex flex-col gap-2.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-secondary">
+<span>Payment Ledger</span>
+<span class="font-bold text-on-surface">Rs. 680 <span class="font-normal text-secondary">(Raast QR)</span></span>
+</div>
+<button class="w-full py-2.5 px-4 bg-primary text-on-primary hover:bg-primary-container rounded-lg font-label-md text-label-md uppercase tracking-wider font-semibold transition-all flex items-center justify-center gap-2 shadow-sm" onclick="advanceCard(this, 'kadhaicol')">
+<span class="material-symbols-outlined text-[18px]">skillet</span>
+            Start Preparing
+          </button>
+</div>
+</div>
+<!-- Ticket Card 4: Additional Queued Token -->
+<div class="station-card chai flex flex-col justify-between bg-surface-container-low rounded-lg p-space-md shadow-md hover:shadow-xl transition-shadow relative overflow-hidden">
+<div>
+<div class="flex items-start justify-between gap-2 pb-3 bg-surface-container-high/60 -mx-4 -mt-4 px-4 py-3 mb-3">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-primary">#086</span>
+<span class="font-label-sm text-label-sm text-secondary">1:21 PM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium mt-0.5">Staff: Noman (Admin block)</p>
+</div>
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-lowest text-secondary uppercase font-semibold">Chai Choolha</span>
+</div>
+<div class="space-y-2.5 my-3">
+<div class="flex items-start gap-2.5 p-2 rounded bg-surface-container-lowest">
+<input class="mt-1 accent-primary w-4 h-4 rounded cursor-pointer" id="item-86-1" type="checkbox"/>
+<label class="font-body-md text-body-md text-on-surface leading-tight cursor-pointer" for="item-86-1">
+<span class="font-bold text-primary font-label-md">3x</span> Doodh Patti Chai
+                <span class="block font-label-sm text-label-sm text-secondary mt-0.5">Cardamom infused, 1 sugar separate</span>
+</label>
+</div>
+</div>
+</div>
+<div class="pt-3 mt-2 bg-surface-container/60 -mx-4 -mb-4 px-4 py-3 flex flex-col gap-2.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-secondary">
+<span>Payment Ledger</span>
+<span class="font-bold text-on-surface">Rs. 240 <span class="font-normal text-secondary">(Campus Wallet)</span></span>
+</div>
+<button class="w-full py-2.5 px-4 bg-surface-container-high hover:bg-surface-container text-on-surface rounded-lg font-label-md text-label-md uppercase tracking-wider font-semibold transition-all flex items-center justify-center gap-2 shadow-sm" onclick="advanceCard(this, 'kadhaicol')">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+            Start Preparing
+          </button>
+</div>
+</div>
+</div>
+<!-- ==================== COLUMN 2: IN KADHAI (PREPARING) ==================== -->
+<div class="flex flex-col gap-4" id="kadhaicol">
+<div class="flex items-center justify-between pb-2 bg-primary/10 px-4 py-3 rounded-lg shadow-sm">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 bg-primary text-on-primary rounded font-label-sm text-label-sm font-bold tracking-widest">[ IN KADHAI ]</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">On Stove</span>
+</div>
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold">5</span>
+</div>
+<!-- Ticket Card 1: Cooking Active Token #084 -->
+<div class="station-card biryani flex flex-col justify-between bg-surface-container-low rounded-lg p-space-md shadow-md hover:shadow-xl transition-shadow relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-primary"></div>
+<div>
+<!-- Card Header & Live Counter -->
+<div class="flex items-start justify-between gap-2 pb-3 bg-surface-container-high/60 -mx-4 -mt-4 px-4 py-3 mb-3">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-primary">#084</span>
+<span class="font-label-sm text-label-sm text-secondary">1:15 PM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium mt-0.5">Student: Omer S. <span class="text-secondary font-label-sm">• SE-22</span></p>
+</div>
+<div class="text-right">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-bold bg-primary/10 px-2 py-0.5 rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+                04:12
+              </span>
+<p class="font-label-sm text-label-sm text-secondary text-[10px] mt-0.5">Target: 06:00</p>
+</div>
+</div>
+<!-- Dish Photo Thumbnail Integration -->
+<div class="grid grid-cols-3 gap-2 mb-3">
+<div class="h-16 rounded overflow-hidden relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Clay pot chicken biryani with saffron rice grains and fresh coriander garnish photographed from top down under warm rustic studio light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv4oT3LCqdwGo_uZFr6rM32MzEM1ADZ3uAd39Xcz_i7DIOCigH8G_CEC6mHq0arCAT2ZJxQeKbICD9W4WXD3ucAnEd9vwWiEC-eqgK-FalXlgkHI3zZV1JfH60YV9yRuoHno8Ux34jdE7aeY5LmB9dFlXbBg8ngtVhzYSokUDqoVuKpainXHIp3AsWNwfQKL2QnBmZa4Xbwxc_4ZJdaHMKJmibxzUKlWNjV9Mpm1sibTXn0XjDNBUR"/>
+<span class="absolute bottom-0 inset-x-0 bg-on-surface/60 text-surface-lowest text-[9px] font-label-sm text-center py-0.5 text-white">Biryani</span>
+</div>
+<div class="h-16 rounded overflow-hidden relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Golden crisp flaky rolled chicken paratha street food roll wrapped in parchment paper under appetizing warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz8O9jJjThzhSGUUTrJraC7hjZKSMXjFLL-TUXULu1EJgzxqPkTT0XN1tuc5OLIxNH_hppg62vCjM3o8tY1HVWr4eST8Z8VjOKtMSteK460-hOU4GUDZbDA2biOiaWebZ2PAkVUYcJDmrwc-1C8UTomLeqZcQWH3Bz9pp68rEIB-1lQ_5bNWu4LbJjZkdM_KOIK92c-KvYguu0vjNjKpQGYdYfpBrfJjvFZaCFkZJ-20m9sAxK1NN0"/>
+<span class="absolute bottom-0 inset-x-0 bg-on-surface/60 text-surface-lowest text-[9px] font-label-sm text-center py-0.5 text-white">Roll x2</span>
+</div>
+<div class="h-16 rounded overflow-hidden relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Steaming hot spiced karak chai poured into an authentic terracotta unglazed kulhad earthen cup with frothy milk top" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4esbjS5macFTjavxgmArXPy-BiphijSOZ66s6uZXEfHF3_sO7uofMTfSQsoASJoUi6jG8Jilm-fBaHs-Ac6td9SQA9NQ_29VAvEsQJbhfhWq034V1SO0HLErgtvQy03Sa21iEITwtsMem_jY1OF996qeRb89qiwMTDAdqVeMXWDnCZAnEDC_qRbbKqNT93oz1BqWtLnlMBndUmmYMqEP0A7N2YcVxtM0riv0hvxlB9tesN8cxew9v"/>
+<span class="absolute bottom-0 inset-x-0 bg-on-surface/60 text-surface-lowest text-[9px] font-label-sm text-center py-0.5 text-white">Kulhad Chai</span>
+</div>
+</div>
+<!-- Item Checklist with Checked States -->
+<div class="space-y-2.5 my-3">
+<div class="flex items-start gap-2.5 p-2 rounded bg-surface-container-lowest">
+<input checked="" class="mt-1 accent-primary w-4 h-4 rounded cursor-pointer" id="item-84-1" type="checkbox"/>
+<label class="font-body-md text-body-md text-on-surface line-through opacity-70 leading-tight cursor-pointer" for="item-84-1">
+<span class="font-bold text-primary font-label-md">1x</span> Chicken Dum Biryani
+                <span class="block font-label-sm text-label-sm text-secondary no-underline opacity-100 mt-0.5">Mild mint raita, roasted brown onions</span>
+</label>
+</div>
+<div class="flex items-start gap-2.5 p-2 rounded bg-surface-container-lowest">
+<input checked="" class="mt-1 accent-primary w-4 h-4 rounded cursor-pointer" id="item-84-2" type="checkbox"/>
+<label class="font-body-md text-body-md text-on-surface line-through opacity-70 leading-tight cursor-pointer" for="item-84-2">
+<span class="font-bold text-primary font-label-md">2x</span> Chicken Chutney Roll
+                <span class="block font-label-sm text-label-sm text-secondary no-underline opacity-100 mt-0.5">Crisp tawa paratha, extra imli drizzle</span>
+</label>
+</div>
+<div class="flex items-start gap-2.5 p-2 rounded bg-surface-container-lowest bg-surface-container-high/40">
+<input class="mt-1 accent-primary w-4 h-4 rounded cursor-pointer" id="item-84-3" type="checkbox"/>
+<label class="font-body-md text-body-md text-on-surface leading-tight cursor-pointer" for="item-84-3">
+<span class="font-bold text-primary font-label-md">1x</span> Karak Kadak Chai
+                <span class="block font-label-sm text-label-sm text-primary font-semibold mt-0.5">Clay Kulhad • Steaming hot final pour</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Card Footer -->
+<div class="pt-3 mt-2 bg-surface-container/60 -mx-4 -mb-4 px-4 py-3 flex flex-col gap-2.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-secondary">
+<span>Billing Method</span>
+<span class="font-bold text-on-surface">Rs. 870 <span class="font-normal text-secondary">(Campus Wallet)</span></span>
+</div>
+<button class="w-full py-2.5 px-4 bg-primary text-on-primary hover:bg-primary-container rounded-lg font-label-md text-label-md uppercase tracking-wider font-semibold transition-all flex items-center justify-center gap-2 shadow-md" onclick="advanceCard(this, 'windowcol')">
+<span class="material-symbols-outlined text-[18px]">countertops</span>
+            Ready for Window / Counter 2
+          </button>
+</div>
+</div>
+<!-- Ticket Card 5: Preparing Token #083 -->
+<div class="station-card biryani flex flex-col justify-between bg-surface-container-low rounded-lg p-space-md shadow-md hover:shadow-xl transition-shadow relative overflow-hidden">
+<div>
+<div class="flex items-start justify-between gap-2 pb-3 bg-surface-container-high/60 -mx-4 -mt-4 px-4 py-3 mb-3">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-primary">#083</span>
+<span class="font-label-sm text-label-sm text-secondary">1:12 PM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium mt-0.5">Student: Bilal H. <span class="text-secondary font-label-sm">• CS-21</span></p>
+</div>
+<div class="text-right">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-bold bg-surface-container-lowest px-2 py-0.5 rounded">
+                05:40
+              </span>
+<p class="font-label-sm text-label-sm text-secondary text-[10px] mt-0.5">Target: 06:00</p>
+</div>
+</div>
+<div class="space-y-2.5 my-3">
+<div class="flex items-start gap-2.5 p-2 rounded bg-surface-container-lowest">
+<input checked="" class="mt-1 accent-primary w-4 h-4 rounded cursor-pointer" id="item-83-1" type="checkbox"/>
+<label class="font-body-md text-body-md text-on-surface line-through opacity-70 leading-tight cursor-pointer" for="item-83-1">
+<span class="font-bold text-primary font-label-md">2x</span> Special Dum Biryani (Double Aloo)
+              </label>
+</div>
+<div class="flex items-start gap-2.5 p-2 rounded bg-surface-container-lowest">
+<input class="mt-1 accent-primary w-4 h-4 rounded cursor-pointer" id="item-83-2" type="checkbox"/>
+<label class="font-body-md text-body-md text-on-surface leading-tight cursor-pointer" for="item-83-2">
+<span class="font-bold text-primary font-label-md">2x</span> Fresh Lime Soda
+              </label>
+</div>
+</div>
+</div>
+<div class="pt-3 mt-2 bg-surface-container/60 -mx-4 -mb-4 px-4 py-3 flex flex-col gap-2.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-secondary">
+<span>Billing Method</span>
+<span class="font-bold text-on-surface">Rs. 920 <span class="font-normal text-secondary">(Cash Token)</span></span>
+</div>
+<button class="w-full py-2.5 px-4 bg-primary text-on-primary hover:bg-primary-container rounded-lg font-label-md text-label-md uppercase tracking-wider font-semibold transition-all flex items-center justify-center gap-2 shadow-sm" onclick="advanceCard(this, 'windowcol')">
+<span class="material-symbols-outlined text-[18px]">countertops</span>
+            Ready for Window
+          </button>
+</div>
+</div>
+</div>
+<!-- ==================== COLUMN 3: READY FOR WINDOW ==================== -->
+<div class="flex flex-col gap-4" id="windowcol">
+<div class="flex items-center justify-between pb-2 bg-surface-container-low px-4 py-3 rounded-lg shadow-sm">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 bg-surface-container-lowest text-on-surface rounded font-label-sm text-label-sm font-bold tracking-widest">[ FOR PICKUP ]</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Window Shelf</span>
+</div>
+<span class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm text-label-sm font-bold text-on-surface">3</span>
+</div>
+<!-- Ticket Card 3: Ready for Window Token #082 -->
+<div class="station-card tawa chai flex flex-col justify-between bg-surface-container-low rounded-lg p-space-md shadow-md hover:shadow-xl transition-shadow relative overflow-hidden">
+<div class="absolute -right-12 -top-12 w-32 h-32 bg-secondary-container/40 rounded-full pointer-events-none"></div>
+<div>
+<!-- Header Bar -->
+<div class="flex items-start justify-between gap-2 pb-3 bg-surface-container-high/60 -mx-4 -mt-4 px-4 py-3 mb-3">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-primary">#082</span>
+<span class="font-label-sm text-label-sm text-secondary">1:10 PM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium mt-0.5">Faculty: Dr. Tariq <span class="text-secondary font-label-sm">• Dept Head</span></p>
+</div>
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-lowest text-primary font-bold">Counter 1</span>
+</div>
+<!-- Pickup Notification Banner -->
+<div class="p-2.5 rounded bg-surface-container-lowest mb-3 flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5 text-primary font-semibold">
+<span class="material-symbols-outlined text-[16px]">campaign</span>
+              Token broadcasted on LED
+            </span>
+<span class="text-secondary">Shelf: A-03</span>
+</div>
+<!-- Items Checklist: All Completed -->
+<div class="space-y-2.5 my-3">
+<div class="flex items-start gap-2.5 p-2 rounded bg-surface-container-lowest">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<div class="font-body-md text-body-md text-on-surface leading-tight">
+<span class="font-bold text-on-surface font-label-md">1x</span> Aloo Samosa Duo
+                <span class="block font-label-sm text-label-sm text-secondary mt-0.5">Fresh tamarind &amp; mint chutneys</span>
+</div>
+</div>
+<div class="flex items-start gap-2.5 p-2 rounded bg-surface-container-lowest">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<div class="font-body-md text-body-md text-on-surface leading-tight">
+<span class="font-bold text-on-surface font-label-md">1x</span> Karak Kadak Chai
+                <span class="block font-label-sm text-label-sm text-secondary mt-0.5">Kulhad packed with clay lid</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-3 mt-2 bg-surface-container/60 -mx-4 -mb-4 px-4 py-3 flex flex-col gap-2.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-secondary">
+<span>Settlement</span>
+<span class="font-bold text-on-surface">Rs. 150 <span class="font-normal text-secondary">(Faculty ID Subsidy)</span></span>
+</div>
+<button class="w-full py-2.5 px-4 bg-primary hover:bg-primary-container text-on-primary rounded-lg font-label-md text-label-md uppercase tracking-wider font-semibold transition-all flex items-center justify-center gap-2 shadow-md" onclick="dismissCard(this)">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+            Token Picked Up / Complete
+          </button>
+</div>
+</div>
+<!-- Ticket Card 6: Ready Token #081 -->
+<div class="station-card chai flex flex-col justify-between bg-surface-container-low rounded-lg p-space-md shadow-md hover:shadow-xl transition-shadow relative overflow-hidden">
+<div>
+<div class="flex items-start justify-between gap-2 pb-3 bg-surface-container-high/60 -mx-4 -mt-4 px-4 py-3 mb-3">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-primary">#081</span>
+<span class="font-label-sm text-label-sm text-secondary">1:06 PM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium mt-0.5">Student: Sarah W. <span class="text-secondary font-label-sm">• Med-I</span></p>
+</div>
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-lowest text-secondary font-bold">Counter 2</span>
+</div>
+<div class="space-y-2.5 my-3">
+<div class="flex items-start gap-2.5 p-2 rounded bg-surface-container-lowest">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<div class="font-body-md text-body-md text-on-surface leading-tight">
+<span class="font-bold text-on-surface font-label-md">2x</span> Kashmiri Pink Chai
+                <span class="block font-label-sm text-label-sm text-secondary mt-0.5">Crushed pistachio &amp; almond slivers</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-3 mt-2 bg-surface-container/60 -mx-4 -mb-4 px-4 py-3 flex flex-col gap-2.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-secondary">
+<span>Settlement</span>
+<span class="font-bold text-on-surface">Rs. 320 <span class="font-normal text-secondary">(Campus Wallet)</span></span>
+</div>
+<button class="w-full py-2.5 px-4 bg-primary hover:bg-primary-container text-on-primary rounded-lg font-label-md text-label-md uppercase tracking-wider font-semibold transition-all flex items-center justify-center gap-2 shadow-md" onclick="dismissCard(this)">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+            Token Picked Up / Complete
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Inventory Ledger & Station Headroom -->
+<div class="mt-space-xl p-space-md bg-surface-container-low rounded-lg shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-primary/10 rounded text-primary">
+<span class="material-symbols-outlined text-[22px]">inventory_2</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Active Stock Ledger</span>
+<p class="font-headline-sm text-headline-sm text-on-surface">Mid-Shift Prep Reserve</p>
+</div>
+</div>
+<!-- Live metrics readout -->
+<div class="flex flex-wrap items-center gap-6 font-label-md text-label-md">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="text-on-surface font-semibold">Biryani:</span>
+<span class="text-secondary">14 plates remaining</span>
+</div>
+<span class="text-outline-variant hidden sm:inline">•</span>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="text-on-surface font-semibold">Parathas:</span>
+<span class="text-secondary">28 rolled dough balls</span>
+</div>
+<span class="text-outline-variant hidden sm:inline">•</span>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="text-on-surface font-semibold">Milk Tea:</span>
+<span class="text-secondary">12L in primary samovar</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 bg-surface-container-lowest hover:bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm transition-colors shadow-sm">
+          + Request Stock Refill
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function filterStation(station, btn) {
+    const tabs = document.querySelectorAll('#station-tabs button');
+    tabs.forEach(t => {
+      t.className = 'px-3 py-1.5 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all';
+    });
+    btn.className = 'px-3 py-1.5 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm font-bold shadow-sm transition-all';
+
+    const cards = document.querySelectorAll('.station-card');
+    cards.forEach(card => {
+      if (station === 'all' || card.classList.contains(station)) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  function toggleAudio(btn) {
+    const isMuted = btn.classList.toggle('text-secondary');
+    const label = btn.querySelector('span:last-child');
+    const icon = btn.querySelector('.material-symbols-outlined');
+    if (isMuted) {
+      label.textContent = 'Chime: OFF';
+      icon.textContent = 'notifications_off';
+      icon.classList.remove('text-primary');
+    } else {
+      label.textContent = 'Chime: ON';
+      icon.textContent = 'notifications_active';
+      icon.classList.add('text-primary');
+    }
+  }
+
+  function advanceCard(btn, targetColId) {
+    const card = btn.closest('.station-card');
+    const target = document.getElementById(targetColId);
+    if (card && target) {
+      card.style.transform = 'scale(0.96)';
+      card.style.opacity = '0.4';
+      setTimeout(() => {
+        target.appendChild(card);
+        card.style.transform = 'scale(1)';
+        card.style.opacity = '1';
+      }, 150);
+    }
+  }
+
+  function dismissCard(btn) {
+    const card = btn.closest('.station-card');
+    if (card) {
+      card.style.transition = 'all 0.3s ease';
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(-10px)';
+      setTimeout(() => card.remove(), 300);
+    }
+  }
+</script></main></div></body></html>
