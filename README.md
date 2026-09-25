@@ -1,6 +1,12 @@
 # Dhaba * Campus Canteen System
 **Developer:** Muhammad Omer Siddiqui (ID: 02-131232-067)
 
+## 🔗 Project Links
+- **Live Application URL:** [https://university-cafe-virid.vercel.app/](https://university-cafe-virid.vercel.app/)
+- **GitHub Repository:** [https://github.com/omer9618/UniversityCafe](https://github.com/omer9618/UniversityCafe)
+
+---
+
 ## 📌 Project Overview
 The **Dhaba * Campus Canteen System** is a full-stack, real-time web application designed to digitize the food ordering and kitchen management process at the university. It bridges the gap between students ordering food and the kitchen staff fulfilling those orders through a live, WebSocket-powered pipeline.
 
